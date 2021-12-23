@@ -1,6 +1,6 @@
 package desafio;
 
-class Despesa {
+public class Despesa {
     String nome;
     //Verificar se não é negativo
     Double quantidade;
