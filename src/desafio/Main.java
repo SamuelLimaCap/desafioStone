@@ -10,7 +10,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
         List<String> pessoas = new ArrayList<>();
         List<Despesa> despesas = null;
-        String paths[] = null; //path[0] => caminho do arquivo de despesa; path[1] caminho do arquivo de pessoas
+        /*
+        paths[0] => caminho do arquivo de despesa;
+        path[1] caminho do arquivo de pessoas
+         */
+        String paths[];
         BufferedReader brDespesas;
         BufferedReader brPessoas;
 
@@ -30,7 +34,7 @@ public class Main {
     public static List<Despesa> pegarDespesasDoArquivo(BufferedReader br) throws IOException {
         List<Despesa> despesas = new ArrayList<>();
         String line;
-        Despesa despesa = null;
+        Despesa despesa;
 
         while ((line = br.readLine()) != null) {
             if ( !line.isEmpty() ) {
@@ -97,7 +101,6 @@ public class Main {
     public static List<String> pegarPessoasDoArquivo(BufferedReader br) throws IOException {
         List<String> pessoas = new ArrayList<>();
         String line;
-        Despesa despesa = null;
 
         while ((line = br.readLine()) != null) {
             if ( !line.isEmpty() ) {
@@ -115,9 +118,8 @@ public class Main {
         Double valorTotalEmCentavos;
 
         valorTotalEmCentavos = calcularValorTotalDespesas(despesas); //valorTotal pode vir com virgula;
-        Map<String, Double> map = calcularValorAPagarPorPessoa(valorTotalEmCentavos, pessoas);
 
-        return map;
+        return calcularValorAPagarPorPessoa(valorTotalEmCentavos, pessoas);
     }
 
     public static Double calcularValorTotalDespesas(List<Despesa> despesaList) {
