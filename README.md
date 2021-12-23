@@ -55,10 +55,10 @@ Após a passagem dos caminhos dos arquivos, o algoritmo será executado e, caso 
 ---
 # Observações
 - Linhas em branco serão desconsideradas
-- Linhas em branco com espaço serão contado como parâmetros
+- Linhas em branco com espaço serão contados como parâmetros
 - No arquivo de despesas, todas as chaves deverão ser minúsculas e como indicado na seção 'Como funciona' (Não será aceito "Nome :", somente "nome:")
 
-#Erros que podem ser gerados no console
+# Erros que podem ser gerados no console
 - Caso o caminho do arquivo esteja errado, o programa irá soltar uma exceção informando que não foi encontrado o arquivo
 - Caso algum valor das despesas esteja incorreto(Ex: "Valor Unitário" ao invés de "valor unitário"), gerará uma exceção no console informando a linha com erro
 - Caso haja algum nome repetido no arquivo de nomes, este gerará uma exceção
